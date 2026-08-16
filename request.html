@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request a Number - Emmy's Global Virtual Numbers</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        nav {
+            background: #111827;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background: #111827;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="numbers.html">Numbers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="form-container">
+
+        <h1>Request a Virtual Number</h1>
+
+        <p>
+            Complete the form below and we'll review your request.
+        </p>
+
+        <form>
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="usa">🇺🇸 United States</option>
+                <option value="uk">🇬🇧 United Kingdom</option>
+                <option value="nigeria">🇳🇬 Nigeria</option>
+                <option value="canada">🇨🇦 Canada</option>
+                <option value="germany">🇩🇪 Germany</option>
+            </select>
+
+            <label for="service">Service Type</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="business">Business communication</option>
+                <option value="sms">SMS communication</option>
+                <option value="voice">Voice communication</option>
+                <option value="other">Other legitimate use</option>
+            </select>
+
+            <label for="message">Additional Information</label>
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us what you need..."
+            ></textarea>
+
+            <button type="submit">
+                Submit Request
+            </button>
+
+        </form>
+
+    </div>
+
+    <footer>
+        © 2026 Emmy's Global Virtual Numbers
+    </footer>
+
+</body>
+</html>
