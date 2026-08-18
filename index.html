@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Emmy's Global Virtual Numbers</title>
 
     <style>
@@ -14,27 +13,27 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
+            background: #f4f6f8;
             color: #222;
         }
 
         nav {
-            background-color: #111827;
-            padding: 18px 20px;
+            background: #111827;
+            padding: 20px 10px;
             text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
-            font-size: 16px;
+            margin: 0 10px;
+            font-size: 15px;
         }
 
         .hero {
             text-align: center;
-            padding: 70px 20px;
-            background-color: white;
+            padding: 75px 20px;
+            background: white;
         }
 
         .hero h1 {
@@ -43,76 +42,63 @@
         }
 
         .hero p {
-            max-width: 650px;
-            margin: 0 auto 25px;
+            max-width: 700px;
+            margin: 0 auto 30px;
             font-size: 19px;
             line-height: 1.6;
+            color: #555;
         }
 
-        .button {
+        .buttons a {
             display: inline-block;
-            padding: 14px 28px;
-            background-color: #111827;
-            color: white;
-            text-decoration: none;
+            padding: 14px 25px;
+            margin: 5px;
             border-radius: 8px;
+            text-decoration: none;
             font-size: 17px;
         }
 
-        .countries {
+        .primary {
+            background: #111827;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #111827;
+            color: #111827;
+            background: white;
+        }
+
+        .section {
             padding: 50px 20px;
             text-align: center;
         }
 
-        .countries h2 {
+        .section h2 {
             font-size: 30px;
-            margin-bottom: 30px;
         }
 
-        .country-container {
+        .countries {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            margin-top: 30px;
         }
 
         .country {
-            background-color: white;
-            width: 220px;
-            padding: 25px 15px;
+            width: 210px;
+            background: white;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-
-        .country h3 {
-            margin-bottom: 10px;
-        }
-
-        .country p {
-            color: #666;
-        }
-
-        .services {
-            background-color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 30px;
-        }
-
-        .services p {
-            max-width: 700px;
-            margin: 15px auto;
-            line-height: 1.6;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
         }
 
         footer {
-            background-color: #111827;
+            background: #111827;
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 25px;
             margin-top: 30px;
         }
 
@@ -122,13 +108,8 @@
             }
 
             nav a {
-                margin: 0 6px;
+                margin: 0 5px;
                 font-size: 14px;
-            }
-
-            .country {
-                width: 100%;
-                max-width: 320px;
             }
         }
     </style>
@@ -136,84 +117,88 @@
 
 <body>
 
-    <nav>
+<nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="request.html">Request Number</a>
     <a href="numbers.html">Numbers</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Login</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-    <section class="hero">
-        <h1>Emmy's Global Virtual Numbers</h1>
+<section class="hero">
 
-        <p>
-            Get virtual phone numbers from supported countries
-            for legitimate business communication and online services.
-        </p>
+    <h1>Emmy's Global Virtual Numbers</h1>
 
-        <a href="#countries" class="button">Explore Numbers</a>
-    </section>
+    <p>
+        Reliable virtual-number services for legitimate
+        business communication and supported online services.
+    </p>
 
-    <section class="countries" id="countries">
+    <div class="buttons">
 
-        <h2>Available Countries</h2>
+        <a class="primary" href="signup.html">
+            Create Account
+        </a>
 
-        <div class="country-container">
+        <a class="secondary" href="login.html">
+            Login
+        </a>
 
-            <div class="country">
-                <h3>🇺🇸 United States</h3>
-                <p>Virtual numbers for supported services.</p>
-            </div>
+    </div>
 
-            <div class="country">
-                <h3>🇬🇧 United Kingdom</h3>
-                <p>Virtual numbers for supported services.</p>
-            </div>
+</section>
 
-            <div class="country">
-                <h3>🇳🇬 Nigeria</h3>
-                <p>Virtual numbers for supported services.</p>
-            </div>
+<section class="section">
 
-            <div class="country">
-                <h3>🇨🇦 Canada</h3>
-                <p>Virtual numbers for supported services.</p>
-            </div>
+    <h2>🌍 Available Countries</h2>
 
-            <div class="country">
-                <h3>🇩🇪 Germany</h3>
-                <p>Virtual numbers for supported services.</p>
-            </div>
+    <div class="countries">
 
-            <div class="country">
-                <h3>🌍 More Countries</h3>
-                <p>More destinations can be added later.</p>
-            </div>
-
+        <div class="country">
+            <h3>🇺🇸 United States</h3>
+            <p>Virtual-number services</p>
         </div>
-    </section>
 
-    <section class="services">
+        <div class="country">
+            <h3>🇬🇧 United Kingdom</h3>
+            <p>Virtual-number services</p>
+        </div>
 
-        <h2>Our Service</h2>
+        <div class="country">
+            <h3>🇳🇬 Nigeria</h3>
+            <p>Virtual-number services</p>
+        </div>
 
-        <p>
-            We provide virtual-number services for legitimate
-            communication, business operations, and supported
-            online applications.
-        </p>
+        <div class="country">
+            <h3>🇨🇦 Canada</h3>
+            <p>Virtual-number services</p>
+        </div>
 
-        <p>
-            Number availability and supported features depend
-            on the country and service provider.
-        </p>
+        <div class="country">
+            <h3>🇩🇪 Germany</h3>
+            <p>Virtual-number services</p>
+        </div>
 
-    </section>
+    </div>
 
-    <footer>
-        <p>© 2026 Emmy's Global Virtual Numbers</p>
-        <p>Professional virtual communication services.</p>
-    </footer>
+</section>
+
+<section class="section">
+
+    <h2>How It Works</h2>
+
+    <p>1️⃣ Create your account.</p>
+    <p>2️⃣ Verify your email address.</p>
+    <p>3️⃣ Log in to your dashboard.</p>
+    <p>4️⃣ Browse available services.</p>
+    <p>5️⃣ Submit a legitimate number request.</p>
+
+</section>
+
+<footer>
+    <p>© 2026 Emmy's Global Virtual Numbers</p>
+    <p>Professional virtual communication services.</p>
+</footer>
 
 </body>
 </html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Emmy's Global Virtual Numbers</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        nav {
+            background: #111827;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .welcome h1 {
+            margin-top: 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 18px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .logout {
+            background: #b91c1c;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #email {
+            font-weight: bold;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #b91c1c;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 25px;
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="numbers.html">Numbers</a>
+    <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Welcome to Your Dashboard</h1>
+
+        <p>
+            Logged in as:
+            <span id="email">Loading...</span>
+        </p>
+
+        <button class="logout" id="logoutButton">
+            Log Out
+        </button>
+
+        <div id="message"></div>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>🌍 Available Numbers</h2>
+            <p>
+                Browse countries and available virtual-number
+                services.
+            </p>
+
+            <a class="button" href="numbers.html">
+                Browse Numbers
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>📦 My Requests</h2>
+            <p>
+                View your submitted number requests.
+            </p>
+
+            <a class="button" href="request.html">
+                Request a Number
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>👤 My Account</h2>
+            <p>
+                Your account is protected by email authentication.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>💬 Support</h2>
+            <p>
+                Need help? Contact our support team.
+            </p>
+
+            <a class="button" href="contact.html">
+                Contact Support
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Emmy's Global Virtual Numbers
+</footer>
+
+<script>
+
+    const SUPABASE_URL =
+        "https://sdihzawapkzvuuulmxngt.supabase.co";
+
+    const SUPABASE_KEY =
+        "sb_publishable_W1ZXn-L36QoEaWJMoLTQiQ_XTLLitAD";
+
+    const supabaseClient = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+    async function checkUser() {
+
+        const { data, error } =
+            await supabaseClient.auth.getUser();
+
+        if (error || !data.user) {
+
+            window.location.href = "login.html";
+            return;
+        }
+
+        document.getElementById("email").textContent =
+            data.user.email;
+    }
+
+    document.getElementById("logoutButton")
+        .addEventListener("click", async function() {
+
+            await supabaseClient.auth.signOut();
+
+            window.location.href = "login.html";
+
+        });
+
+    checkUser();
+
+</script>
+
+</body>
+</html>
